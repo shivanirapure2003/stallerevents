@@ -26,3 +26,24 @@ if (slideshow) {
   changeBackground();
   setInterval(changeBackground, 4000); // every 4 seconds
 }
+
+
+
+// Show service overlays on scroll (mobile only)
+if (window.innerWidth <= 768) {
+  const serviceItems = document.querySelectorAll('.service-item .overlay');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      } else {
+        entry.target.classList.remove('show');
+      }
+    });
+  }, {
+    threshold: 0.5 // 50% visible
+  });
+
+  serviceItems.forEach(overlay => observer.observe(overlay));
+}

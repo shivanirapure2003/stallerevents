@@ -442,7 +442,7 @@
   font-size: 1rem;
 }
 .we-are-here-section {
-  background-image: url('img/5.jpg'); /* Replace with actual image */
+  background-image: url('img/5.webp'); /* Replace with actual image */
   background-size: cover;
   background-position: center;
   padding: 100px 20px;
@@ -1001,5 +1001,33 @@
   .about-page .founder-desc p {
     font-size: 1rem;
     line-height: 1.6;
+  }
+}
+
+
+
+/* for grid in our page autoplay grid */
+
+
+/* Mobile: force overlay visible when .show is active */
+@media (max-width: 768px) {
+  .service-item .overlay {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .service-item .overlay.show {
+    opacity: 1 !important;
+    pointer-events: auto;
+  }
+}
+
+
+
+/* slides align little left */
+
+@media (max-width: 768px) {
+  #slideshow {
+    background-position: 60% center !important;
   }
 }
