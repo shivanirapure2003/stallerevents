@@ -11,9 +11,9 @@ const slideshow = document.getElementById('slideshow');
 
 if (slideshow) {
   const images = [
-    'img/slide1.jpg',
-    'img/slide2.jpeg',
-    'img/slide3new.jpg'
+    'img/slide1.webp',
+    'img/slide2.webp',
+    'img/slide3new.webp'
   ];
 
   let index = 0;
